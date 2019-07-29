@@ -1,0 +1,19 @@
+a:hover {
+    font-weight: bold;
+}
+
+a:visited {
+    color: teal;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+body, footer {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#homeBackground {
+    background-color: lightcyan;
+}

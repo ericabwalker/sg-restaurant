@@ -1,41 +1,79 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Half Loaf Bakery &amp; Cafe</title>
 
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Half Loaf Bakery &amp; Cafe</title>
+    <style>
+        .required {
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="restaurantStyles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
 
-    <body>
-        <h1>Half Loaf Bakery &amp; Cafe</h1><hr>
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="contact.html">Contact Us</a><hr>
-        
-        <form>
-            Name: <input type="text"><br>
-            Email: <input type="email"><br>
-            Phone: <input type="number"><br>
-            Reason for Inquiry: <select>
-                <option>Catering</option>
-                <option>Private Party</option>
-                <option>Feedback</option>
-                <option>Other</option>
-            </select><br>
-            Additional Information: <textarea></textarea><br>
-            Have you been to the restaurant? <input type="radio" name="answer" checked>No</input><input type="radio" name="answer">Yes</input><br>
-            Best days to contact you: <input type="checkbox">M</input><input type="checkbox">T</input><input type="checkbox">W</input><input type="checkbox">Th</input><input type="checkbox">F</input><br>
-            <input type="submit" value="Send Request">
+<body>
+    <h1 style="font-family:'Montserrat', sans-serif;">Half Loaf Bakery &amp; Cafe</h1>
+    <hr>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact Us</a>
+    <hr>
 
+    <form>
+        <label for="name" class="required">Name:</label>
+        <input type="text" name="name" id="name"><br>
 
+        <label for="email" class="required">Email:</label>
+        <input type="email" name="email" id="email"><br>
 
-        </form>
+        <label for="phone" class="required">Phone:</label>
+        <input type="tel" name="phone" id="phone"><br>
 
-    </body>
-    <footer>
-        <hr>
-        <p>1456 Market Street Nashville, TN 72836</p>
-        <p>(718) 562-8931</p>
-        <hr>
-    </footer>
+        <label for="reason" class="required">Reason for Inquiry:</label>
+        <select id="reason">
+            <option label="Catering">Catering</option>
+            <option label="Party">Private Party</option>
+            <option label="Feedback">Feedback</option>
+            <option label="Other">Other</option>
+        </select><br>
+
+        <label for="comments">Additional Information:</label>
+        <textarea id="comments" name="comments"></textarea><br>
+
+        <span class="required">Have you been to the restaurant?</span>
+        <label for="no">No</label>
+        <input type="radio" id="no" name="answer" value="no" checked></input>
+
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="answer" value="yes"></input><br>
+
+        <span>Best days to contact you:</span>
+        <label for="monday">M</label>
+        <input type="checkbox" id="monday" name="monday">
+
+        <label for="tuesday">T</label>
+        <input type="checkbox" id="tuesday" name="tuesday">
+
+        <label for="wednesday">W</label>
+        <input type="checkbox" id="wednesday" name="wednesday">
+
+        <label for="thursday">Th</label>
+        <input type="checkbox" id="thursday" name="thursday">
+
+        <label for="friday">F</label>
+        <input type="checkbox" id="friday" name="friday"><br>
+
+        <input type="submit" value="Send Request">
+    </form>
+
+</body>
+<footer>
+    <hr>
+    <p>1456 Market Street Nashville, TN 72836</p>
+    <p>(718) 562-8931</p>
+    <hr>
+</footer>
+
 </html>
