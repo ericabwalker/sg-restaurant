@@ -3,71 +3,176 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Half Loaf Bakery &amp; Cafe</title>
     <style>
         .required {
             font-weight: bold;
         }
     </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="restaurantStyles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <noscript>This site is best viewed with JavaScript enabled</noscript>
 </head>
 
 <body>
     <h1 style="font-family:'Montserrat', sans-serif;">Half Loaf Bakery &amp; Cafe</h1>
     <hr>
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="contact.html">Contact Us</a>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item homeIcon">
+            <a class="nav-link" href="index.html">
+                <i class="material-icons">home</i>
+            </a>
+        </li>
+        <li class="nav-item homeLink">
+            <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact Us</a>
+        </li>
+    </ul>
     <hr>
 
-    <form>
-        <label for="name" class="required">Name:</label>
-        <input type="text" name="name" id="name"><br>
+    <form class="needs-validation" novalidate>
+        <div class="form-group row">
+            <label for="name" class="required col-sm-2 col-form-label">Name:</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+                <div class="invalid-feedback">
+                    Please provide name
+                </div>
+            </div>
+        </div>
 
-        <label for="email" class="required">Email:</label>
-        <input type="email" name="email" id="email"><br>
+        <div class="form-group row">
+            <label for="email" class="required col-sm-2 col-form-label">Email:</label>
+            <div class="col-sm-5">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                <div class="invalid-feedback">
+                    Please provide a valid e-mail
+                </div>
+            </div>
+        </div>
 
-        <label for="phone" class="required">Phone:</label>
-        <input type="tel" name="phone" id="phone"><br>
+        <div class="form-group row">
+            <label for="phone" class="required col-sm-2 col-form-label">Phone:</label>
+            <div class="col-sm-5">
+                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Telephone" required>
+                <div class="invalid-feedback">
+                    Please provide a phone number
+                </div>
+            </div>
+        </div>
 
-        <label for="reason" class="required">Reason for Inquiry:</label>
-        <select id="reason">
-            <option label="Catering">Catering</option>
-            <option label="Party">Private Party</option>
-            <option label="Feedback">Feedback</option>
-            <option label="Other">Other</option>
-        </select><br>
+        <div class="form-group row">
+            <label for="reason" class="required col-sm-2 col-form-label">Reason for Inquiry:</label>
+            <div class="col-sm-5">
+                <select class="custom-select" id="reason" required>
+                    <option label="Catering">Catering</option>
+                    <option label="Party">Private Party</option>
+                    <option label="Feedback">Feedback</option>
+                    <option label="Other">Other</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please make a selection
+                </div>
+            </div>
+        </div>
 
-        <label for="comments">Additional Information:</label>
-        <textarea id="comments" name="comments"></textarea><br>
+        <div class="form-group row">
+            <label for="comments" class="col-sm-2 col-form-label">Additional Information:</label>
+            <div class="col-sm-5">
+                <textarea class="form-control" id="comments" name="comments"></textarea><br>
+            </div>
+        </div>
 
-        <span class="required">Have you been to the restaurant?</span>
-        <label for="no">No</label>
-        <input type="radio" id="no" name="answer" value="no" checked></input>
+        <div class="form-group row">
+            <span class="col-form-label col-sm-2">Have you been to the restaurant?</span>
+            <div class="col-sm-10">
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="no">No</label>
+                    <input class="form-check-input" type="radio" id="no" name="answer" value="no" checked></input>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="yes">Yes</label>
+                    <input class="form-check-input" type="radio" id="yes" name="answer" value="yes"></input><br>
+                </div>
+            </div>
+        </div>
 
-        <label for="yes">Yes</label>
-        <input type="radio" id="yes" name="answer" value="yes"></input><br>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                <span>Best days to contact you:</span>
+            </div>
+            <div class="col-sm-10">
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="monday">M</label>
+                    <input class="form-check-input" type="checkbox" id="monday" name="monday">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="tuesday">T</label>
+                    <input class="form-check-input" type="checkbox" id="tuesday" name="tuesday">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="wednesday">W</label>
+                    <input class="form-check-input" type="checkbox" id="wednesday" name="wednesday">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="thursday">Th</label>
+                    <input class="form-check-input" type="checkbox" id="thursday" name="thursday">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="friday">F</label>
+                    <input class="form-check-input" type="checkbox" id="friday" name="friday">
+                </div>
 
-        <span>Best days to contact you:</span>
-        <label for="monday">M</label>
-        <input type="checkbox" id="monday" name="monday">
+            </div>
+        </div>
 
-        <label for="tuesday">T</label>
-        <input type="checkbox" id="tuesday" name="tuesday">
-
-        <label for="wednesday">W</label>
-        <input type="checkbox" id="wednesday" name="wednesday">
-
-        <label for="thursday">Th</label>
-        <input type="checkbox" id="thursday" name="thursday">
-
-        <label for="friday">F</label>
-        <input type="checkbox" id="friday" name="friday"><br>
-
-        <input type="submit" value="Send Request">
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary" value="Send Request">Send Request</button>
+            </div>
+        </div>
     </form>
 
+
+    <script>
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        if (form.checkValidity() === true) {
+                            alert("Your form was submitted, we'll be in touch soon!");
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 <footer>
     <hr>
